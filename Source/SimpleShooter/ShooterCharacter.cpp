@@ -52,10 +52,10 @@ void AShooterCharacter::MoveRight(float AxisValue)
 
 void AShooterCharacter::LookUpRate(float AxisValue)
 {
-	AddControllerPitchInput(AxisValue * RotationRate * GetWorld()->GetDeltaSeconds());
+	AddControllerPitchInput(AxisValue * VerticalRotationRate * GetWorld()->GetDeltaSeconds());
 }
 
 void AShooterCharacter::LookRightRate(float AxisValue)
 {
-	AddControllerYawInput(AxisValue * RotationRate * GetWorld()->GetDeltaSeconds());
+	AddControllerYawInput(AxisValue * HorizontalRotationRate * GetWorld()->GetDeltaSeconds());
 }
